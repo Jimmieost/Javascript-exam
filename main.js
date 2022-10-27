@@ -34,10 +34,11 @@ function updateHTML(data) {
     const article = document.createElement("article");
     article.classList.add("beer");
 
-    // console.log(item);
+    console.log(item);
     article.innerHTML = `
     <div>
     <h2>${item.name}</h2>
+    <h3>${item.abv}</h3>
     <p>${item.tagline}</p>
     <img src=${item.image_url} alt="Beers">
     <p>${item.description}</p>
@@ -47,6 +48,7 @@ function updateHTML(data) {
     button.innerText = "Add to cart";
     button.addEventListener("click", () => addToCart(item));
     article.append(button);
+    console.log(button);
 
     section.append(article);
   }
@@ -63,3 +65,6 @@ function addToCart(item) {
   cart.push(item);
   console.log(cart);
 }
+
+// const sorted = beers.sort((a, b) => a.abv - b.abv);
+// beers.sort((beer) => beer.abv > 4.0);
