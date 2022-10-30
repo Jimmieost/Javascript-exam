@@ -113,3 +113,7 @@ button:hover {
   transform: scale(1.02);
   background-color: black;
 }
+h1 {
+  font-size: 50px;
+  color: black;
+}
