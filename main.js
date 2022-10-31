@@ -27,7 +27,7 @@ const sortButton = document.createElement("button");
 sortButton.addEventListener("click", () => {
   sortByAlocoholLevel();
 });
-sortButton.textContent = "Sort";
+sortButton.textContent = "Sort by alcohol %";
 actions.append(sortButton);
 getBeers(currentPage);
 const pageButton = document.createElement("button");
@@ -45,7 +45,7 @@ function sortByAlocoholLevel() {
 }
 
 function getBeers(page) {
-  fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=10`)
+  fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=20`)
     .then((response) => response.json())
     .then((data) => {
       beers.push(...data); // När vi fått tillbala öl ifrån api:t så lägger vi till det i beers arrayn
@@ -70,6 +70,7 @@ function renderBeers() {
       <div>
       <h2>${beer.name}</h2>
       <h3>${beer.abv} %</h3>
+      <h4>First brewed: ${beer.first_brewed}</h4>
       <p>${beer.tagline}</p>
       <img src=${beer.image_url} alt="Beers">
       <p>${beer.description}</p>
