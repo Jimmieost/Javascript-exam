@@ -50,7 +50,6 @@ button {
 
 html,
 body {
-  /* height: 100%; */
   background-color: rgb(20, 186, 186);
 }
 
@@ -120,4 +119,8 @@ button:hover {
 h1 {
   font-size: 60px;
   color: black;
+}
+.price {
+  margin-top: auto;
+  font-size: 25px;
 }

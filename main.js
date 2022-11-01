@@ -53,10 +53,10 @@ function getBeers(page) {
     });
 }
 
-function addToCart(item) {
-  cart.push(item);
-  console.log(cart);
-}
+// function addToCart(item) {
+//   cart.push(item);
+//   console.log(cart);
+// }
 
 function renderBeers() {
   section.innerHTML = ""; // Tömmer alla artiklar varje gång
@@ -74,14 +74,41 @@ function renderBeers() {
       <p>${beer.tagline}</p>
       <img src=${beer.image_url} alt="Beers">
       <p>${beer.description}</p>
+      <p class="price">${Math.floor(beer.abv * 5.2)}:-</p>
+
       </div>
       `;
     const button = document.createElement("button");
+    button.setAttribute("id", `${beer.name}`);
     button.innerText = "Add to cart";
-    button.addEventListener("click", () => addToCart(beer));
+    button.addEventListener("click", addToCart);
     article.append(button);
     console.log(button);
 
     section.append(article);
+  }
+}
+
+function addToCart(addToCart) {
+  let beer = addToCart.srcElement.id;
+  cart.push(beer);
+  console.log(cart);
+  if (beer) {
+    const cartList = document.createElement("li");
+    cartList.innerHTML = `<p> ${cart[cart.length - 1]}</p>`;
+    document.querySelector(".cart-list").append(cartList);
+  }
+}
+const button = document.createElement("button");
+button.innerText = "Clear cart";
+button.addEventListener("click", clearCart);
+document.querySelector(".offcanvas-body").append(button);
+
+function clearCart() {
+  cart.length = 0;
+  console.log(cart);
+  const cartList = document.querySelector(".cart-list");
+  while (cartList.firstChild) {
+    cartList.removeChild(cartList.firstChild);
   }
 }
