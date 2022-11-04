@@ -4,7 +4,9 @@ let items = [
   { text: "Menu 2", path: "" },
   { text: "Menu 3", path: "" },
 ];
-let cart = [];
+let cart = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
 let beers = []; // Array där vi lägger till alla öl
 
 const main = document.querySelector("main");
@@ -53,11 +55,6 @@ function getBeers(page) {
     });
 }
 
-// function addToCart(item) {
-//   cart.push(item);
-//   console.log(cart);
-// }
-
 function renderBeers() {
   section.innerHTML = ""; // Tömmer alla artiklar varje gång
   for (let beer of beers) {
@@ -65,7 +62,6 @@ function renderBeers() {
     const article = document.createElement("article");
     article.classList.add("beer");
 
-    console.log(beer);
     article.innerHTML = `
       <div>
       <h2>${beer.name}</h2>
@@ -83,7 +79,6 @@ function renderBeers() {
     button.innerText = "Add to cart";
     button.addEventListener("click", addToCart);
     article.append(button);
-    console.log(button);
 
     section.append(article);
   }
@@ -92,13 +87,23 @@ function renderBeers() {
 function addToCart(addToCart) {
   let beer = addToCart.srcElement.id;
   cart.push(beer);
+  const cartList = document.createElement("li");
+  cartList.innerHTML = `<p> ${cart[cart.length - 1]}</p>`;
+  document.querySelector(".cart-list").append(cartList);
+
+  store();
+}
+
+function loadCart() {
   console.log(cart);
-  if (beer) {
+  for (let beer of cart) {
     const cartList = document.createElement("li");
-    cartList.innerHTML = `<p> ${cart[cart.length - 1]}</p>`;
+    cartList.innerHTML = `<p> ${beer}</p>`;
     document.querySelector(".cart-list").append(cartList);
   }
 }
+loadCart();
+
 const button = document.createElement("button");
 button.innerText = "Clear cart";
 button.addEventListener("click", clearCart);
@@ -106,9 +111,12 @@ document.querySelector(".offcanvas-body").append(button);
 
 function clearCart() {
   cart.length = 0;
-  console.log(cart);
   const cartList = document.querySelector(".cart-list");
   while (cartList.firstChild) {
     cartList.removeChild(cartList.firstChild);
   }
+  store();
+}
+function store() {
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
