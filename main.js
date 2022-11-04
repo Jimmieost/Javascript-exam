@@ -100,7 +100,7 @@ function clearCart() {
   while (cartList.firstChild) {
     cartList.removeChild(cartList.firstChild);
   }
-  store();
+  localStorage.clear();
 }
 function store() {
   localStorage.setItem("cart", JSON.stringify(cart));
