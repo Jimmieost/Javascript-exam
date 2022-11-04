@@ -1,9 +1,3 @@
-//meny
-let items = [
-  { text: "Menu 1", path: "" },
-  { text: "Menu 2", path: "" },
-  { text: "Menu 3", path: "" },
-];
 let cart = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : [];
@@ -13,18 +7,8 @@ const main = document.querySelector("main");
 const actions = document.querySelector(".actions");
 const loadMore = document.querySelector(".load-more");
 const section = document.querySelector(".container");
-const nav = document.querySelector("nav");
 let currentPage = 1;
 
-items.forEach(function (item) {
-  0;
-  let link = document.createElement("a");
-  link.classList.add("menu-item");
-  link.href = item.path;
-  link.textContent = item.text;
-
-  nav.appendChild(link);
-});
 const sortButton = document.createElement("button");
 sortButton.addEventListener("click", () => {
   sortByAlocoholLevel();
@@ -75,8 +59,9 @@ function renderBeers() {
       </div>
       `;
     const button = document.createElement("button");
+    button.classList.add("bx", "bx-cart-add");
     button.setAttribute("id", `${beer.name}`);
-    button.innerText = "Add to cart";
+    //button.innerText = "Add to cart";
     button.addEventListener("click", addToCart);
     article.append(button);
 

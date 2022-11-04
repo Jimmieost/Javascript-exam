@@ -1,56 +1,10 @@
 * {
   margin: 0;
 }
-button {
-  background-color: black;
-  color: white;
-  padding: 5px;
-  border: none;
-  font-size: 1.1em;
-  /* 10% bigger than normal */
-}
-
-#nav {
-  display: flex;
-  position: relative;
-  /* box-shadow: 0 0 20px rgb(255, 0, 0); */
-  height: auto;
-  transform-origin: center;
-  /* Make effect work from center outward */
-  transition: all 0.5s;
-  /* Make changes to all CSS happen over 1 second */
-  padding-inline: 20px;
-  background-color: #222222;
-  box-shadow: 0 0 20px rgb(5, 95, 107);
-}
-
-#nav a {
-  transition: 200ms;
-  color: #ddd;
-  font-size: 1.25rem;
-}
-
-#nav a:hover {
-  color: #fff;
-}
-
-.menu-item {
-  display: block;
-  /* Each item on its own line */
-  text-decoration: none;
-  /* no underline on the links */
-  padding-inline: 1rem;
-  padding-block: 30px;
-  font-family: Arial;
-}
-
-.menu-item:hover {
-  background-color: #444;
-}
 
 html,
 body {
-  background-color: rgb(20, 186, 186);
+  background-color: rgb(186, 182, 182);
 }
 
 main {
@@ -61,7 +15,11 @@ header {
   height: 200px;
   line-height: 200px;
   text-align: center;
-  border-bottom: 1px solid rgb(87, 87, 87);
+  border-bottom: 3px solid rgb(13, 13, 13);
+  background-color: rgb(243, 226, 157);
+}
+.cart-button {
+  float: right;
 }
 
 .beer img {
@@ -94,21 +52,20 @@ header {
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  background-color: rgb(18, 206, 206);
+  background-color: rgb(243, 226, 157);
 }
 .beer img:hover {
   -ms-transform: scale(2);
   -webkit-transform: scale(2);
   transform: scale(2);
 }
-button {
+button:not(.bx) {
   background-color: rgba(0, 0, 0, 0.781);
-  color: rgb(18, 206, 206);
+  color: white;
   margin-top: 8px;
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 5px;
-  border-radius: 10px red;
 }
 button:hover {
   -ms-transform: scale(1.02);
@@ -116,11 +73,24 @@ button:hover {
   transform: scale(1.02);
   background-color: black;
 }
+
 h1 {
   font-size: 60px;
   color: black;
+  padding-top: 40px;
 }
 .price {
   margin-top: auto;
   font-size: 25px;
+}
+.bx {
+  float: right;
+  font-size: 50px;
+}
+.bx-cart-add {
+  background-color: rgb(243, 226, 157);
+}
+.bx-cart-add::before {
+  font-size: 40px;
+  color: white;
 }
