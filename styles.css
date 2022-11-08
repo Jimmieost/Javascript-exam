@@ -4,7 +4,7 @@
 
 html,
 body {
-  background-color: rgb(186, 182, 182);
+  background-color: rgb(36, 35, 35);
 }
 
 main {
@@ -16,7 +16,9 @@ header {
   line-height: 200px;
   text-align: center;
   border-bottom: 3px solid rgb(13, 13, 13);
-  background-color: rgb(243, 226, 157);
+  box-shadow: 0 0 20px red;
+  background-color: rgb(60, 60, 60);
+  color: crimson;
 }
 .cart-button {
   float: right;
@@ -36,13 +38,17 @@ header {
 }
 
 .beer {
-  border: 1px solid black;
+  border: 1px solid crimson;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.462);
+  color: white;
+  background-color: rgb(60, 60, 60);
   padding: 1rem;
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 300ms, background-color 300ms;
+  border-radius: 1rem;
 }
 
 .load-more {
@@ -53,7 +59,7 @@ header {
   -ms-transform: scale(1.02);
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
-  background-color: rgb(243, 226, 157);
+  background-color: rgb(50, 49, 49);
 }
 .beer img:hover {
   -ms-transform: scale(2);
@@ -62,28 +68,31 @@ header {
 }
 
 .black-button {
-  background-color: rgba(0, 0, 0, 0.781);
+  background-color: crimson;
   color: white;
   margin-top: 8px;
-  margin-left: 40px;
+  margin-left: 65px;
   margin-right: 40px;
   margin-bottom: 5px;
+  border-radius: 1rem;
 }
 
 .clear-cart-button {
   background-color: rgba(0, 0, 0, 0.781);
   color: white;
+  border-radius: 1rem;
 }
 
 .purchase-cart-button {
   background-color: rgba(0, 0, 0, 0.781);
   color: white;
   float: right;
+  border-radius: 1rem;
 }
 
 .cart-button {
   background-color: white;
-  color: black;
+  color: crimson;
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
@@ -95,12 +104,11 @@ button:hover {
   -ms-transform: scale(1.02);
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
-  background-color: black;
+  background-color: rgb(185, 43, 43);
 }
 
 h1 {
   font-size: 60px;
-  color: black;
   padding-top: 40px;
 }
 .price {
@@ -112,9 +120,26 @@ h1 {
   font-size: 50px;
 }
 .bx-cart-add {
-  background-color: rgb(243, 226, 157);
+  background-color: crimson;
+  border-radius: 1rem;
 }
 .bx-cart-add::before {
   font-size: 40px;
   color: white;
+}
+.bx-cart::before {
+  font-size: 40px;
+  color: white;
+  padding: 1rem;
+}
+.age {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  color: white;
+  margin-left: 65px;
+  margin-top: 20px;
+}
+.age input {
+  max-width: 200px;
 }
