@@ -60,7 +60,8 @@ header {
   -webkit-transform: scale(2);
   transform: scale(2);
 }
-button:not(.bx) {
+
+.black-button {
   background-color: rgba(0, 0, 0, 0.781);
   color: white;
   margin-top: 8px;
@@ -68,7 +69,29 @@ button:not(.bx) {
   margin-right: 40px;
   margin-bottom: 5px;
 }
-button:not(.bx):hover {
+
+.clear-cart-button {
+  background-color: rgba(0, 0, 0, 0.781);
+  color: white;
+}
+
+.purchase-cart-button {
+  background-color: rgba(0, 0, 0, 0.781);
+  color: white;
+  float: right;
+}
+
+.cart-button {
+  background-color: white;
+  color: black;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  border: none;
+}
+
+button:hover {
   -ms-transform: scale(1.02);
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
