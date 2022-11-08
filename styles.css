@@ -37,11 +37,12 @@ header {
 
 .beer {
   border: 1px solid black;
+  padding: 1rem;
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 300ms;
+  transition: transform 300ms, background-color 300ms;
 }
 
 .load-more {
@@ -49,9 +50,9 @@ header {
 }
 
 .beer:hover {
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -ms-transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
   background-color: rgb(243, 226, 157);
 }
 .beer img:hover {
@@ -67,7 +68,7 @@ button:not(.bx) {
   margin-right: 40px;
   margin-bottom: 5px;
 }
-button:hover {
+button:not(.bx):hover {
   -ms-transform: scale(1.02);
   -webkit-transform: scale(1.02);
   transform: scale(1.02);

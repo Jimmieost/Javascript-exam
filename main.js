@@ -49,11 +49,11 @@ function renderBeers() {
     article.innerHTML = `
       <div>
       <h2>${beer.name}</h2>
-      <h3>${beer.abv} %</h3>
-      <h4>First brewed: ${beer.first_brewed}</h4>
+      <p>Alcohol content: ${beer.abv} %</p>
+      <p>First brewed: ${beer.first_brewed}</p>
       <p>${beer.tagline}</p>
       <img src=${beer.image_url} alt="Beers">
-      <p>${beer.description}</p>
+      
       <p class="price">${Math.floor(beer.abv * 5.2)}:-</p>
 
       </div>
