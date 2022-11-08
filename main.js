@@ -236,3 +236,18 @@ function clearCart() {
 function updateCartInStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+const ageInput = document.getElementById("ageInput");
+ageInput.addEventListener("input", () => {
+  if (isNaN(ageInput.value)) {
+    ageInput.value = "";
+    return;
+  }
+  if (ageInput.value > 20) {
+    document.getElementById("inputReply").innerHTML =
+      "You are old enough to buy alcohol!";
+  } else {
+    document.getElementById("inputReply").innerHTML =
+      "You are too young to buy alcohol!";
+  }
+});
