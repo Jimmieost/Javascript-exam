@@ -72,7 +72,7 @@ function renderBeers() {
       <p>${beer.tagline}</p>
       <img src=${beer.image_url} alt="Beers">
       
-      <p class="price">${Math.floor(beer.abv * 5.2)}:-</p>
+      <p class="price">${Math.floor((beer.abv * 5.2) / 2 + 10)}:-</p>
 
       </div>
       `;
@@ -94,10 +94,10 @@ function addToCart(beerId) {
   let beerInCart = cart.find((beer) => beer.id === beerId);
   if (beerInCart) {
     beerInCart.quantity += 1;
-    beerInCart.price += Math.floor(beer.abv * 5.2);
+    beerInCart.price += Math.floor((beer.abv * 5.2) / 2 + 10);
   } else {
     beer.quantity = 1;
-    beer.price = Math.floor(beer.abv * 5.2);
+    beer.price = Math.floor((beer.abv * 5.2) / 2 + 10);
     cart.push(beer);
   }
   updateCartInStorage();
