@@ -243,7 +243,7 @@ ageInput.addEventListener("input", () => {
     ageInput.value = "";
     return;
   }
-  if (ageInput.value > 20) {
+  if (ageInput.value >= 20) {
     document.getElementById("inputReply").innerHTML =
       "You are old enough to buy alcohol!";
   } else {

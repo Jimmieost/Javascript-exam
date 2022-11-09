@@ -18,7 +18,8 @@ header {
   border-bottom: 3px solid rgb(13, 13, 13);
   box-shadow: 0 0 20px red;
   background-color: rgb(60, 60, 60);
-  color: crimson;
+  color: rgb(219, 4, 4);
+  font-style: oblique;
 }
 .cart-button {
   float: right;
@@ -38,7 +39,7 @@ header {
 }
 
 .beer {
-  border: 1px solid crimson;
+  border: 1px solid rgb(160, 4, 35);
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.462);
   color: white;
   background-color: rgb(60, 60, 60);
@@ -68,7 +69,7 @@ header {
 }
 
 .black-button {
-  background-color: crimson;
+  background-color: rgb(219, 4, 4);
   color: white;
   margin-top: 8px;
   margin-left: 65px;
@@ -89,10 +90,13 @@ header {
   float: right;
   border-radius: 1rem;
 }
+.purchase-cart-button:hover {
+  background-color: green;
+}
 
 .cart-button {
   background-color: white;
-  color: crimson;
+  color: rgb(201, 9, 47);
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
@@ -104,7 +108,7 @@ button:hover {
   -ms-transform: scale(1.02);
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
-  background-color: rgb(185, 43, 43);
+  background-color: red;
 }
 
 h1 {
@@ -120,7 +124,7 @@ h1 {
   font-size: 50px;
 }
 .bx-cart-add {
-  background-color: crimson;
+  background-color: rgb(219, 4, 4);
   border-radius: 1rem;
 }
 .bx-cart-add::before {
@@ -131,6 +135,7 @@ h1 {
   font-size: 40px;
   color: white;
   padding: 1rem;
+  margin-right: 2rem;
 }
 .age {
   display: flex;
