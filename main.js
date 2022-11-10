@@ -14,13 +14,13 @@ sortButton.addEventListener("click", () => {
   sortByAlocoholLevel();
 });
 sortButton.textContent = "Sort by alcohol %";
-sortButton.classList.add("black-button");
+sortButton.classList.add("red-button");
 actions.append(sortButton);
 getBeers(currentPage);
 const pageButton = document.createElement("button");
 pageButton.innerText = "Load more";
 pageButton.classList.add("load-more");
-pageButton.classList.add("black-button");
+pageButton.classList.add("red-button");
 pageButton.addEventListener("click", () => {
   getBeers((currentPage += 1));
 });

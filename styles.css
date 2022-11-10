@@ -52,10 +52,6 @@ header {
   border-radius: 1rem;
 }
 
-.load-more {
-  margin-left: 1rem;
-}
-
 .beer:hover {
   -ms-transform: scale(1.02);
   -webkit-transform: scale(1.02);
@@ -68,13 +64,10 @@ header {
   transform: scale(2);
 }
 
-.black-button {
+.red-button {
   background-color: rgb(219, 4, 4);
   color: white;
-  margin-top: 8px;
-  margin-left: 65px;
-  margin-right: 40px;
-  margin-bottom: 5px;
+  margin-left: 5rem;
   border-radius: 1rem;
 }
 
@@ -147,4 +140,17 @@ h1 {
 }
 .age input {
   max-width: 200px;
+}
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+a#topbtn {
+  background-color: rgb(219, 4, 4);
+  color: white;
+  padding: 7px;
+  margin-right: 5rem;
 }
