@@ -154,3 +154,11 @@ a#topbtn {
   padding: 7px;
   margin-right: 5rem;
 }
+.offcanvas-body {
+  background-color: rgba(0, 0, 0, 0.33);
+  box-shadow: 0 0 20px red;
+}
+.offcanvas-header {
+  background-color: rgba(0, 0, 0, 0.679);
+  color: white;
+}
