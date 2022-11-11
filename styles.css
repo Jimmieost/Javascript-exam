@@ -65,7 +65,7 @@ header {
 }
 
 .red-button {
-  background-color: rgb(219, 4, 4);
+  background-color: rgba(255, 0, 51, 0.932);
   color: white;
   margin-left: 5rem;
   border-radius: 1rem;
@@ -89,7 +89,7 @@ header {
 
 .cart-button {
   background-color: white;
-  color: rgb(201, 9, 47);
+  color: rgba(255, 0, 51, 0.842);
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
@@ -117,7 +117,7 @@ h1 {
   font-size: 50px;
 }
 .bx-cart-add {
-  background-color: rgb(219, 4, 4);
+  background-color: rgba(255, 0, 51, 0.932);
   border-radius: 1rem;
 }
 .bx-cart-add::before {
@@ -149,10 +149,11 @@ h1 {
 }
 
 a#topbtn {
-  background-color: rgb(219, 4, 4);
+  background-color: rgba(255, 0, 51, 0.959);
   color: white;
-  padding: 7px;
+  padding: 2px;
   margin-right: 5rem;
+  border: 2px solid black;
 }
 .offcanvas-body {
   background-color: rgba(0, 0, 0, 0.33);
