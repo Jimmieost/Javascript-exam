@@ -11,10 +11,26 @@ main {
   height: 100%;
 }
 
+.login {
+  float: right;
+  justify-content: end;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+button {
+  color: white;
+  background-color: rgba(255, 0, 51, 0.932);
+  border-radius: 1rem;
+  transition: 250ms;
+}
+
 header {
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
   border-bottom: 3px solid rgb(13, 13, 13);
   box-shadow: 0 0 20px red;
   background-color: rgb(60, 60, 60);
@@ -67,8 +83,11 @@ header {
 .red-button {
   background-color: rgba(255, 0, 51, 0.932);
   color: white;
-  margin-left: 5rem;
+  margin-left: 9%;
+  margin-top: 1rem;
   border-radius: 1rem;
+  @media screen and (max-width: 800px) {
+  }
 }
 
 .clear-cart-button {
@@ -105,9 +124,10 @@ button:hover {
 }
 
 h1 {
-  font-size: 60px;
-  padding-top: 40px;
+  text-align: center;
+  /* margin-left: 18%; */
 }
+
 .price {
   margin-top: auto;
   font-size: 25px;
@@ -130,7 +150,7 @@ h1 {
   padding: 1rem;
   margin-right: 2rem;
 }
-.age {
+/* .age {
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -140,20 +160,29 @@ h1 {
 }
 .age input {
   max-width: 200px;
-}
+} */
 .bottom-buttons {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  margin-left: 1rem;
+  margin-left: 9%;
+  margin-right: 9%;
 }
 
 a#topbtn {
   background-color: rgba(255, 0, 51, 0.959);
+  text-decoration: none;
   color: white;
   padding: 2px;
-  margin-right: 5rem;
-  border: 2px solid black;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+a#topbtn:hover {
+  -ms-transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  background-color: red;
+}
+.load-more {
 }
 .offcanvas-body {
   background-color: rgba(0, 0, 0, 0.33);

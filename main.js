@@ -20,7 +20,7 @@ getBeers(currentPage);
 const pageButton = document.createElement("button");
 pageButton.innerText = "Load more";
 pageButton.classList.add("load-more");
-pageButton.classList.add("red-button");
+// pageButton.classList.add("red-button");
 pageButton.addEventListener("click", () => {
   getBeers((currentPage += 1));
 });
@@ -117,7 +117,7 @@ function renderCart() {
   const cartList = document.querySelector(".cart-list");
   cartList.textContent = "";
   cartList.addEventListener("load", function () {
-    console.log("cartList has been loaded");
+    //console.log("cartList has been loaded");
   });
   const cartItemHeadingRow = document.createElement("div");
   cartItemHeadingRow.classList.add("row");
