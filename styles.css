@@ -11,23 +11,38 @@ main {
   height: 100%;
 }
 
-.login {
-  float: right;
-  justify-content: end;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  display: flex;
-  gap: 1rem;
+.login-btn {
+  position: absolute;
+  bottom: 10%;
+  right: 1rem;
 }
+
+.signin-btn {
+  position: absolute;
+  bottom: 10%;
+  right: 100px;
+}
+
+/* .login {
+  float: right; 
+  justify-content: end;
+   margin-top: 1rem; 
+  margin-right: 1rem;
+  gap: 1rem;
+  position: absolute;
+  bottom: 80%;
+  right: 0;
+} */
 button {
   color: white;
   background-color: rgba(255, 0, 51, 0.932);
   border-radius: 1rem;
   transition: 250ms;
+  display: flex;
 }
 
 header {
-  display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   height: 120px;
@@ -51,7 +66,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
-  padding: 1rem;
+  padding-top: 5rem;
 }
 
 .beer {
@@ -81,13 +96,12 @@ header {
 }
 
 .red-button {
+  position: relative;
   background-color: rgba(255, 0, 51, 0.932);
   color: white;
-  margin-left: 9%;
+  left: 0.5rem;
   margin-top: 1rem;
   border-radius: 1rem;
-  @media screen and (max-width: 800px) {
-  }
 }
 
 .clear-cart-button {
@@ -124,8 +138,9 @@ button:hover {
 }
 
 h1 {
-  text-align: center;
-  /* margin-left: 18%; */
+  display: flex;
+  justify-content: center;
+  line-height: 80px;
 }
 
 .price {
@@ -147,8 +162,10 @@ h1 {
 .bx-cart::before {
   font-size: 40px;
   color: white;
-  padding: 1rem;
-  margin-right: 2rem;
+  /* padding: 1rem; */
+  position: absolute;
+  bottom: 6%;
+  right: 12rem;
 }
 /* .age {
   display: flex;
@@ -164,8 +181,11 @@ h1 {
 .bottom-buttons {
   display: flex;
   justify-content: space-between;
-  margin-left: 9%;
-  margin-right: 9%;
+  margin-top: 1rem;
+  /* margin-left: 9%;
+  margin-right: 9%; */
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 a#topbtn {
@@ -182,8 +202,7 @@ a#topbtn:hover {
   transform: scale(1.02);
   background-color: red;
 }
-.load-more {
-}
+
 .offcanvas-body {
   background-color: rgba(0, 0, 0, 0.33);
   box-shadow: 0 0 20px red;
