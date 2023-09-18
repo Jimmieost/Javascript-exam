@@ -6,7 +6,7 @@ let beers = []; // Array där vi lägger till alla öl
 const main = document.querySelector("main");
 const actions = document.querySelector(".actions");
 const loadMore = document.querySelector(".load-more");
-const section = document.querySelector(".container");
+const section = document.querySelector(".beer-container");
 let currentPage = 1;
 
 const sortButton = document.createElement("button");

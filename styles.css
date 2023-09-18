@@ -14,25 +14,15 @@ main {
 .login-btn {
   position: absolute;
   bottom: 10%;
-  right: 1rem;
+  right: 3rem;
 }
 
 .signin-btn {
   position: absolute;
   bottom: 10%;
-  right: 100px;
+  right: 125px;
 }
 
-/* .login {
-  float: right; 
-  justify-content: end;
-   margin-top: 1rem; 
-  margin-right: 1rem;
-  gap: 1rem;
-  position: absolute;
-  bottom: 80%;
-  right: 0;
-} */
 button {
   color: white;
   background-color: rgba(255, 0, 51, 0.932);
@@ -62,11 +52,11 @@ header {
   transition: transform 300ms;
 }
 
-.container {
+.beer-container {
+  padding: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
-  padding-top: 5rem;
 }
 
 .beer {
@@ -99,7 +89,6 @@ header {
   position: relative;
   background-color: rgba(255, 0, 51, 0.932);
   color: white;
-  left: 0.5rem;
   margin-top: 1rem;
   border-radius: 1rem;
 }
@@ -140,6 +129,7 @@ button:hover {
 h1 {
   display: flex;
   justify-content: center;
+  padding: 1rem;
   line-height: 80px;
 }
 
@@ -162,30 +152,26 @@ h1 {
 .bx-cart::before {
   font-size: 40px;
   color: white;
-  /* padding: 1rem; */
   position: absolute;
   bottom: 6%;
-  right: 12rem;
+  right: 13rem;
 }
-/* .age {
+.age {
   display: flex;
   gap: 10px;
   flex-direction: column;
   color: white;
-  margin-left: 65px;
+  /* margin-left: 0.5rem; */
   margin-top: 20px;
 }
 .age input {
+  border-radius: 1rem;
   max-width: 200px;
-} */
+}
 .bottom-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
-  /* margin-left: 9%;
-  margin-right: 9%; */
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  padding: 3rem;
 }
 
 a#topbtn {
@@ -210,4 +196,8 @@ a#topbtn:hover {
 .offcanvas-header {
   background-color: rgba(0, 0, 0, 0.679);
   color: white;
+}
+
+.content-container {
+  padding-left: 3rem;
 }
