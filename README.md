@@ -1,16 +1,16 @@
 # Javascript-exam
 
-På denna sida har jag använt Brewdogs Punk-API och laddat in ölen samt lagt till information om ölen som alkohol % mm.
-Sidan har har en knapp där användaren kan sortera öl efter alkohol % samt ladda in fler öl på sidan utan att man behöver ladda om hela sidan.
-Har även skapat en shopping cart där man lägga till öl om man vill handla eller bara spara sina favoriter och där priset på varje öl man lagt till summeras.
+On this page, I have used Brewdog's Punk API to load beers and added information about the beers such as alcohol percentage, and more. The page includes a button that allows the user to sort beers by alcohol percentage and load more beers onto the page without the need to refresh the entire page. I have also created a shopping cart where users can add beers for purchase or simply save their favorites, with the price of each beer added being totaled.
 
-Det går att tömma varukorgen med en knapp och det går att klicka på purchase-knappen där en alert till användaren säger att beställningen är mottagen och sedan töms varukorgen.
-Lagt till local storage så att varukorgen sparas när sidan laddas om.
+The shopping cart can be cleared with a button, and there is a "purchase" button that displays an alert to the user, indicating that the order has been received, and then empties the cart. I've implemented local storage to ensure that the cart is preserved when the page is refreshed.
 
-Har även skapat ett input field där användaren kan skriva in sin ålder och få svar om de har åldern inne för att få handla alkoholhaltiga drycker.
-
-#Verktyg
+Tools Used
 HTML
 CSS
-BOOTSTRAP
-Javascript
+Bootstrap
+JavaScript
+
+
+
+
+
